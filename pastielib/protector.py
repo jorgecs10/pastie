@@ -189,8 +189,6 @@ class ClipboardProtector(object):
 				history_tree_item.text = item.payload
 
 		history_tree = tree.ElementTree(history_tree_root)
-		if not os.path.isdir(ClipboardProtector.PASTIE_DATA_DIR):
-		    os.mkdir(ClipboardProtector.PASTIE_DATA_DIR)		
 		history_tree.write(output_file, "UTF-8")
 
 	# erase the clipboard history. the current contents of the clipoard will remain.
